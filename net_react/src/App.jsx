@@ -5,11 +5,11 @@ import { userData } from './userData.js';
 const UserCard = (props) => {
   return (
     <div class="card">
-          <img src={props.userData.picture} alt="Avatar"/>
-          <p>Name: {props.userData.name}</p>
-          <p>Age: {props.userData.age}</p>
-          <p>Gender: {props.userData.gender}</p>
-          <p>Balance: {props.userData.balance}</p>
+          <img src={props.user.picture} alt="Avatar"/>
+          <p>Name: {props.user.name}</p>
+          <p>Age: {props.user.age}</p>
+          <p>Gender: {props.user.gender}</p>
+          <p>Balance: {props.user.balance}</p>
       </div>
   )
 }
@@ -34,7 +34,6 @@ function App() {
     setState(newState)
   }
   
-
   return (
   <div>
   <header className="App">
@@ -46,7 +45,7 @@ function App() {
    </header> 
   <div className="wrapper">
     <div className="box">
-      {state.map(user => <UserCard userData={user} />)}
+      {state.map(users => <UserCard user={users} />)}
     </div>
   </div>
   </div>
