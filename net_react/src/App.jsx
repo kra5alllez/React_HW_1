@@ -5,6 +5,7 @@ import { userData } from './userData.js';
 const UserCard = (props) => {
   return (
     <div class="card">
+          <p></p>
           <img src={props.user.picture} alt="Avatar"/>
           <p>Name: {props.user.name}</p>
           <p>Age: {props.user.age}</p>
